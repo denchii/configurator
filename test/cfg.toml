@@ -1,0 +1,23 @@
+[project]
+name = "Configurator test"
+
+[project.dependencies]
+python = "^3.9"
+pytomlpp = "^0.3.3"
+jsonschema = "^3.2.0"
+libnacl = "^1.7.2"
+
+[project.test.third_level]
+number = 10
+
+[generator]
+exclude = [".git", "assets"]
+
+[build]
+type = "Debug"
+
+[build.output]
+path = "./build"
+type = "exec"
+
+
