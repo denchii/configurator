@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "configurator"
+version = "1.0.0"
+description = "Configuration file converter."
+authors = ["denchi <denis.zakharov@everynet.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+libnacl = "^1.8.0"
+pytomlpp = "^1.0.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
