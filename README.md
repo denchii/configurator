@@ -1,15 +1,15 @@
 # Python project configurator
 
-Add configuration to your project - use parameters as attributes. 
+This library helps to add configuration file to Python projects. Forget about deep level dictionaries - parameters from file could be used as classes with attributes.  
 
 ## Features
 
-- Support JSON and TOML file formats;
 - Creates 'type' object which attributes are parameters from config;
 - Any level of nesting - complex object will became an attribute of the parent object.
 - Add new parameters as attributes on the fly;
-- Store configuration object as a file;
-- Encrypt stored configuration with a secret key.
+- Stores configuration object as a file;
+- Encrypts stored configuration with a secret key.
+- Supports JSON and TOML file formats;
 
 ## Usage
 
@@ -69,6 +69,8 @@ class MyDecoder(MapDecoder):
         super().__init__(processor=self.process)
 
     def process(self, key, val):
+        # The return value of this method will be used insted of value.
+        # Will be applied to every value in the user_data
         return aliases.get(val)
 ```
 
